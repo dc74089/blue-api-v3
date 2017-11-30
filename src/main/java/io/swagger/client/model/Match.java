@@ -119,7 +119,7 @@ public class Match {
   private Long postResultTime = null;
 
   @SerializedName("score_breakdown")
-  private Object scoreBreakdown = null;
+  private GenericMatchBreakdown scoreBreakdown = null;
 
   @SerializedName("videos")
   private List<MatchVideos> videos = null;
@@ -322,7 +322,7 @@ public class Match {
     this.postResultTime = postResultTime;
   }
 
-  public Match scoreBreakdown(Object scoreBreakdown) {
+  public Match scoreBreakdown(GenericMatchBreakdown scoreBreakdown) {
     this.scoreBreakdown = scoreBreakdown;
     return this;
   }
@@ -332,11 +332,11 @@ public class Match {
    * @return scoreBreakdown
   **/
   @ApiModelProperty(value = "Score breakdown for auto, teleop, etc. points. Varies from year to year. May be null.")
-  public Object getScoreBreakdown() {
+  public GenericMatchBreakdown getScoreBreakdown() {
     return scoreBreakdown;
   }
 
-  public void setScoreBreakdown(Object scoreBreakdown) {
+  public void setScoreBreakdown(GenericMatchBreakdown scoreBreakdown) {
     this.scoreBreakdown = scoreBreakdown;
   }
 
