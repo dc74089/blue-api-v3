@@ -14,9 +14,11 @@ Method | HTTP request | Description
 [**getEventTeams**](ListApi.md#getEventTeams) | **GET** /event/{event_key}/teams | 
 [**getEventTeamsKeys**](ListApi.md#getEventTeamsKeys) | **GET** /event/{event_key}/teams/keys | 
 [**getEventTeamsSimple**](ListApi.md#getEventTeamsSimple) | **GET** /event/{event_key}/teams/simple | 
+[**getEventTeamsStatuses**](ListApi.md#getEventTeamsStatuses) | **GET** /event/{event_key}/teams/statuses | 
 [**getEventsByYear**](ListApi.md#getEventsByYear) | **GET** /events/{year} | 
 [**getEventsByYearKeys**](ListApi.md#getEventsByYearKeys) | **GET** /events/{year}/keys | 
 [**getEventsByYearSimple**](ListApi.md#getEventsByYearSimple) | **GET** /events/{year}/simple | 
+[**getTeamEventsStatusesByYear**](ListApi.md#getTeamEventsStatusesByYear) | **GET** /team/{team_key}/events/{year}/statuses | 
 [**getTeams**](ListApi.md#getTeams) | **GET** /teams/{page_num} | 
 [**getTeamsByYear**](ListApi.md#getTeamsByYear) | **GET** /teams/{year}/{page_num} | 
 [**getTeamsByYearKeys**](ListApi.md#getTeamsByYearKeys) | **GET** /teams/{year}/{page_num}/keys | 
@@ -595,6 +597,63 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getEventTeamsStatuses"></a>
+# **getEventTeamsStatuses**
+> Map&lt;String, TeamEventStatus&gt; getEventTeamsStatuses(eventKey, ifModifiedSince)
+
+
+
+Gets a key-value list of the event statuses for teams competing at the given event.
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.ListApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: apiKey
+ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+apiKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.setApiKeyPrefix("Token");
+
+ListApi apiInstance = new ListApi();
+String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+try {
+    Map<String, TeamEventStatus> result = apiInstance.getEventTeamsStatuses(eventKey, ifModifiedSince);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ListApi#getEventTeamsStatuses");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventKey** | **String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+
+### Return type
+
+[**Map&lt;String, TeamEventStatus&gt;**](TeamEventStatus.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getEventsByYear"></a>
 # **getEventsByYear**
 > List&lt;Event&gt; getEventsByYear(year, ifModifiedSince)
@@ -621,7 +680,7 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<Event> result = apiInstance.getEventsByYear(year, ifModifiedSince);
@@ -636,7 +695,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -678,7 +737,7 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<String> result = apiInstance.getEventsByYearKeys(year, ifModifiedSince);
@@ -693,7 +752,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -735,7 +794,7 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<EventSimple> result = apiInstance.getEventsByYearSimple(year, ifModifiedSince);
@@ -750,12 +809,71 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
 
 [**List&lt;EventSimple&gt;**](EventSimple.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="getTeamEventsStatusesByYear"></a>
+# **getTeamEventsStatusesByYear**
+> Map&lt;String, TeamEventStatus&gt; getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince)
+
+
+
+Gets a key-value list of the event statuses for events this team has competed at in the given year.
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.ListApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: apiKey
+ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+apiKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.setApiKeyPrefix("Token");
+
+ListApi apiInstance = new ListApi();
+String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+try {
+    Map<String, TeamEventStatus> result = apiInstance.getTeamEventsStatusesByYear(teamKey, year, ifModifiedSince);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ListApi#getTeamEventsStatusesByYear");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **teamKey** | **String**| TBA Team Key, eg &#x60;frc254&#x60; |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+
+### Return type
+
+[**Map&lt;String, TeamEventStatus&gt;**](TeamEventStatus.md)
 
 ### Authorization
 
@@ -792,7 +910,7 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal pageNum = new BigDecimal(); // BigDecimal | Page number of results to return, zero-indexed
+Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<Team> result = apiInstance.getTeams(pageNum, ifModifiedSince);
@@ -807,7 +925,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNum** | **BigDecimal**| Page number of results to return, zero-indexed |
+ **pageNum** | **Integer**| Page number of results to return, zero-indexed |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -849,8 +967,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
-BigDecimal pageNum = new BigDecimal(); // BigDecimal | Page number of results to return, zero-indexed
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
+Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<Team> result = apiInstance.getTeamsByYear(year, pageNum, ifModifiedSince);
@@ -865,8 +983,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **BigDecimal**| Page number of results to return, zero-indexed |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
+ **pageNum** | **Integer**| Page number of results to return, zero-indexed |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -908,8 +1026,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
-BigDecimal pageNum = new BigDecimal(); // BigDecimal | Page number of results to return, zero-indexed
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
+Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<String> result = apiInstance.getTeamsByYearKeys(year, pageNum, ifModifiedSince);
@@ -924,8 +1042,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **BigDecimal**| Page number of results to return, zero-indexed |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
+ **pageNum** | **Integer**| Page number of results to return, zero-indexed |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -967,8 +1085,8 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
-BigDecimal pageNum = new BigDecimal(); // BigDecimal | Page number of results to return, zero-indexed
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
+Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<TeamSimple> result = apiInstance.getTeamsByYearSimple(year, pageNum, ifModifiedSince);
@@ -983,8 +1101,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
- **pageNum** | **BigDecimal**| Page number of results to return, zero-indexed |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
+ **pageNum** | **Integer**| Page number of results to return, zero-indexed |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -1026,7 +1144,7 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal pageNum = new BigDecimal(); // BigDecimal | Page number of results to return, zero-indexed
+Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<String> result = apiInstance.getTeamsKeys(pageNum, ifModifiedSince);
@@ -1041,7 +1159,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNum** | **BigDecimal**| Page number of results to return, zero-indexed |
+ **pageNum** | **Integer**| Page number of results to return, zero-indexed |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -1083,7 +1201,7 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 ListApi apiInstance = new ListApi();
-BigDecimal pageNum = new BigDecimal(); // BigDecimal | Page number of results to return, zero-indexed
+Integer pageNum = 56; // Integer | Page number of results to return, zero-indexed
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<TeamSimple> result = apiInstance.getTeamsSimple(pageNum, ifModifiedSince);
@@ -1098,7 +1216,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNum** | **BigDecimal**| Page number of results to return, zero-indexed |
+ **pageNum** | **Integer**| Page number of results to return, zero-indexed |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type

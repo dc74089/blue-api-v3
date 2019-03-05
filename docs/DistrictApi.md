@@ -441,7 +441,7 @@ apiKey.setApiKey("YOUR API KEY");
 //apiKey.setApiKeyPrefix("Token");
 
 DistrictApi apiInstance = new DistrictApi();
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<DistrictList> result = apiInstance.getDistrictsByYear(year, ifModifiedSince);
@@ -456,7 +456,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -531,11 +531,11 @@ Name | Type | Description  | Notes
 
 <a name="getTeamDistricts"></a>
 # **getTeamDistricts**
-> Map&lt;String, String&gt; getTeamDistricts(teamKey, ifModifiedSince)
+> List&lt;DistrictList&gt; getTeamDistricts(teamKey, ifModifiedSince)
 
 
 
-Gets a list or year and district pairs to denote each year the team was in a district. Will return an empty array if the team was never in a district.
+Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.
 
 ### Example
 ```java
@@ -558,7 +558,7 @@ DistrictApi apiInstance = new DistrictApi();
 String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
-    Map<String, String> result = apiInstance.getTeamDistricts(teamKey, ifModifiedSince);
+    List<DistrictList> result = apiInstance.getTeamDistricts(teamKey, ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DistrictApi#getTeamDistricts");
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Map&lt;String, String&gt;**](Map.md)
+[**List&lt;DistrictList&gt;**](DistrictList.md)
 
 ### Authorization
 

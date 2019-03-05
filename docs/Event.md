@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **year** | **Integer** | Year the event data is for. | 
 **shortName** | **String** | Same as &#x60;name&#x60; but doesn&#39;t include event specifiers, such as &#39;Regional&#39; or &#39;District&#39;. May be null. |  [optional]
 **eventTypeString** | **String** | Event Type, eg Regional, District, or Offseason. | 
-**week** | **Integer** | Week of the competition season this event is in. |  [optional]
+**week** | **Integer** | Week of the event relative to the first official season event, zero-indexed. Only valid for Regionals, Districts, and District Championships. Null otherwise. (Eg. A season with a week 0 &#39;preseason&#39; event does not count, and week 1 events will show 0 here. Seasons with a week 0.5 regional event will show week 0 for those event(s) and week 1 for week 1 events and so on.) |  [optional]
 **address** | **String** | Address of the event&#39;s venue, if available. |  [optional]
 **postalCode** | **String** | Postal code from the event address. |  [optional]
 **gmapsPlaceId** | **String** | Google Maps Place ID for the event address. |  [optional]
@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **locationName** | **String** | Name of the location at the address for the event, eg. Blue Alliance High School. |  [optional]
 **timezone** | **String** | Timezone name. |  [optional]
 **website** | **String** | The event&#39;s website, if any. |  [optional]
-**firstEventId** | **Integer** | The FIRST internal Event ID, used to link to the event on the FRC webpage. |  [optional]
+**firstEventId** | **String** | The FIRST internal Event ID, used to link to the event on the FRC webpage. |  [optional]
 **firstEventCode** | **String** | Public facing event code used by FIRST (on frc-events.firstinspires.org, for example) |  [optional]
 **webcasts** | [**List&lt;Webcast&gt;**](Webcast.md) |  |  [optional]
 **divisionKeys** | **List&lt;String&gt;** | An array of event keys for the divisions at this event. |  [optional]

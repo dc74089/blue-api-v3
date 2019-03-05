@@ -1,3 +1,57 @@
+# swagger-java-client
+
+## Requirements
+
+Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
+
+## Installation
+
+To install the API client library to your local Maven repository, simply execute:
+
+```shell
+mvn install
+```
+
+To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
+
+```shell
+mvn deploy
+```
+
+Refer to the [official documentation](https://maven.apache.org/plugins/maven-deploy-plugin/usage.html) for more information.
+
+### Maven users
+
+Add this dependency to your project's POM:
+
+```xml
+<dependency>
+    <groupId>io.swagger</groupId>
+    <artifactId>swagger-java-client</artifactId>
+    <version>1.0.0</version>
+    <scope>compile</scope>
+</dependency>
+```
+
+### Gradle users
+
+Add this dependency to your project's build file:
+
+```groovy
+compile "io.swagger:swagger-java-client:1.0.0"
+```
+
+### Others
+
+At first generate the JAR by executing:
+
+    mvn package
+
+Then manually install the following JARs:
+
+* target/swagger-java-client-1.0.0.jar
+* target/lib/*.jar
+
 ## Getting Started
 
 Please follow the [installation](#installation) instruction and execute the following Java code:
@@ -62,6 +116,7 @@ Class | Method | HTTP request | Description
 *EventApi* | [**getEventAwards**](docs/EventApi.md#getEventAwards) | **GET** /event/{event_key}/awards | 
 *EventApi* | [**getEventDistrictPoints**](docs/EventApi.md#getEventDistrictPoints) | **GET** /event/{event_key}/district_points | 
 *EventApi* | [**getEventInsights**](docs/EventApi.md#getEventInsights) | **GET** /event/{event_key}/insights | 
+*EventApi* | [**getEventMatchTimeseries**](docs/EventApi.md#getEventMatchTimeseries) | **GET** /event/{event_key}/matches/timeseries | 
 *EventApi* | [**getEventMatches**](docs/EventApi.md#getEventMatches) | **GET** /event/{event_key}/matches | 
 *EventApi* | [**getEventMatchesKeys**](docs/EventApi.md#getEventMatchesKeys) | **GET** /event/{event_key}/matches/keys | 
 *EventApi* | [**getEventMatchesSimple**](docs/EventApi.md#getEventMatchesSimple) | **GET** /event/{event_key}/matches/simple | 
@@ -72,6 +127,7 @@ Class | Method | HTTP request | Description
 *EventApi* | [**getEventTeams**](docs/EventApi.md#getEventTeams) | **GET** /event/{event_key}/teams | 
 *EventApi* | [**getEventTeamsKeys**](docs/EventApi.md#getEventTeamsKeys) | **GET** /event/{event_key}/teams/keys | 
 *EventApi* | [**getEventTeamsSimple**](docs/EventApi.md#getEventTeamsSimple) | **GET** /event/{event_key}/teams/simple | 
+*EventApi* | [**getEventTeamsStatuses**](docs/EventApi.md#getEventTeamsStatuses) | **GET** /event/{event_key}/teams/statuses | 
 *EventApi* | [**getEventsByYear**](docs/EventApi.md#getEventsByYear) | **GET** /events/{year} | 
 *EventApi* | [**getEventsByYearKeys**](docs/EventApi.md#getEventsByYearKeys) | **GET** /events/{year}/keys | 
 *EventApi* | [**getEventsByYearSimple**](docs/EventApi.md#getEventsByYearSimple) | **GET** /events/{year}/simple | 
@@ -86,6 +142,7 @@ Class | Method | HTTP request | Description
 *EventApi* | [**getTeamEventsByYearSimple**](docs/EventApi.md#getTeamEventsByYearSimple) | **GET** /team/{team_key}/events/{year}/simple | 
 *EventApi* | [**getTeamEventsKeys**](docs/EventApi.md#getTeamEventsKeys) | **GET** /team/{team_key}/events/keys | 
 *EventApi* | [**getTeamEventsSimple**](docs/EventApi.md#getTeamEventsSimple) | **GET** /team/{team_key}/events/simple | 
+*EventApi* | [**getTeamEventsStatusesByYear**](docs/EventApi.md#getTeamEventsStatusesByYear) | **GET** /team/{team_key}/events/{year}/statuses | 
 *ListApi* | [**getDistrictEvents**](docs/ListApi.md#getDistrictEvents) | **GET** /district/{district_key}/events | 
 *ListApi* | [**getDistrictEventsKeys**](docs/ListApi.md#getDistrictEventsKeys) | **GET** /district/{district_key}/events/keys | 
 *ListApi* | [**getDistrictEventsSimple**](docs/ListApi.md#getDistrictEventsSimple) | **GET** /district/{district_key}/events/simple | 
@@ -96,27 +153,31 @@ Class | Method | HTTP request | Description
 *ListApi* | [**getEventTeams**](docs/ListApi.md#getEventTeams) | **GET** /event/{event_key}/teams | 
 *ListApi* | [**getEventTeamsKeys**](docs/ListApi.md#getEventTeamsKeys) | **GET** /event/{event_key}/teams/keys | 
 *ListApi* | [**getEventTeamsSimple**](docs/ListApi.md#getEventTeamsSimple) | **GET** /event/{event_key}/teams/simple | 
+*ListApi* | [**getEventTeamsStatuses**](docs/ListApi.md#getEventTeamsStatuses) | **GET** /event/{event_key}/teams/statuses | 
 *ListApi* | [**getEventsByYear**](docs/ListApi.md#getEventsByYear) | **GET** /events/{year} | 
 *ListApi* | [**getEventsByYearKeys**](docs/ListApi.md#getEventsByYearKeys) | **GET** /events/{year}/keys | 
 *ListApi* | [**getEventsByYearSimple**](docs/ListApi.md#getEventsByYearSimple) | **GET** /events/{year}/simple | 
+*ListApi* | [**getTeamEventsStatusesByYear**](docs/ListApi.md#getTeamEventsStatusesByYear) | **GET** /team/{team_key}/events/{year}/statuses | 
 *ListApi* | [**getTeams**](docs/ListApi.md#getTeams) | **GET** /teams/{page_num} | 
 *ListApi* | [**getTeamsByYear**](docs/ListApi.md#getTeamsByYear) | **GET** /teams/{year}/{page_num} | 
 *ListApi* | [**getTeamsByYearKeys**](docs/ListApi.md#getTeamsByYearKeys) | **GET** /teams/{year}/{page_num}/keys | 
 *ListApi* | [**getTeamsByYearSimple**](docs/ListApi.md#getTeamsByYearSimple) | **GET** /teams/{year}/{page_num}/simple | 
 *ListApi* | [**getTeamsKeys**](docs/ListApi.md#getTeamsKeys) | **GET** /teams/{page_num}/keys | 
 *ListApi* | [**getTeamsSimple**](docs/ListApi.md#getTeamsSimple) | **GET** /teams/{page_num}/simple | 
+*MatchApi* | [**getEventMatchTimeseries**](docs/MatchApi.md#getEventMatchTimeseries) | **GET** /event/{event_key}/matches/timeseries | 
 *MatchApi* | [**getEventMatches**](docs/MatchApi.md#getEventMatches) | **GET** /event/{event_key}/matches | 
 *MatchApi* | [**getEventMatchesKeys**](docs/MatchApi.md#getEventMatchesKeys) | **GET** /event/{event_key}/matches/keys | 
 *MatchApi* | [**getEventMatchesSimple**](docs/MatchApi.md#getEventMatchesSimple) | **GET** /event/{event_key}/matches/simple | 
 *MatchApi* | [**getMatch**](docs/MatchApi.md#getMatch) | **GET** /match/{match_key} | 
 *MatchApi* | [**getMatchSimple**](docs/MatchApi.md#getMatchSimple) | **GET** /match/{match_key}/simple | 
+*MatchApi* | [**getMatchTimeseries**](docs/MatchApi.md#getMatchTimeseries) | **GET** /match/{match_key}/timeseries | 
 *MatchApi* | [**getTeamEventMatches**](docs/MatchApi.md#getTeamEventMatches) | **GET** /team/{team_key}/event/{event_key}/matches | 
 *MatchApi* | [**getTeamEventMatchesKeys**](docs/MatchApi.md#getTeamEventMatchesKeys) | **GET** /team/{team_key}/event/{event_key}/matches/keys | 
 *MatchApi* | [**getTeamEventMatchesSimple**](docs/MatchApi.md#getTeamEventMatchesSimple) | **GET** /team/{team_key}/event/{event_key}/matches/simple | 
 *MatchApi* | [**getTeamMatchesByYear**](docs/MatchApi.md#getTeamMatchesByYear) | **GET** /team/{team_key}/matches/{year} | 
 *MatchApi* | [**getTeamMatchesByYearKeys**](docs/MatchApi.md#getTeamMatchesByYearKeys) | **GET** /team/{team_key}/matches/{year}/keys | 
 *MatchApi* | [**getTeamMatchesByYearSimple**](docs/MatchApi.md#getTeamMatchesByYearSimple) | **GET** /team/{team_key}/matches/{year}/simple | 
-*TBAApi* | [**getStatus**](docs/TBAApi.md#getStatus) | **GET** /status | 
+*TbaApi* | [**getStatus**](docs/TbaApi.md#getStatus) | **GET** /status | 
 *TeamApi* | [**getDistrictRankings**](docs/TeamApi.md#getDistrictRankings) | **GET** /district/{district_key}/rankings | 
 *TeamApi* | [**getDistrictTeams**](docs/TeamApi.md#getDistrictTeams) | **GET** /district/{district_key}/teams | 
 *TeamApi* | [**getDistrictTeamsKeys**](docs/TeamApi.md#getDistrictTeamsKeys) | **GET** /district/{district_key}/teams/keys | 
@@ -124,6 +185,7 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**getEventTeams**](docs/TeamApi.md#getEventTeams) | **GET** /event/{event_key}/teams | 
 *TeamApi* | [**getEventTeamsKeys**](docs/TeamApi.md#getEventTeamsKeys) | **GET** /event/{event_key}/teams/keys | 
 *TeamApi* | [**getEventTeamsSimple**](docs/TeamApi.md#getEventTeamsSimple) | **GET** /event/{event_key}/teams/simple | 
+*TeamApi* | [**getEventTeamsStatuses**](docs/TeamApi.md#getEventTeamsStatuses) | **GET** /event/{event_key}/teams/statuses | 
 *TeamApi* | [**getTeam**](docs/TeamApi.md#getTeam) | **GET** /team/{team_key} | 
 *TeamApi* | [**getTeamAwards**](docs/TeamApi.md#getTeamAwards) | **GET** /team/{team_key}/awards | 
 *TeamApi* | [**getTeamAwardsByYear**](docs/TeamApi.md#getTeamAwardsByYear) | **GET** /team/{team_key}/awards/{year} | 
@@ -139,9 +201,12 @@ Class | Method | HTTP request | Description
 *TeamApi* | [**getTeamEventsByYearSimple**](docs/TeamApi.md#getTeamEventsByYearSimple) | **GET** /team/{team_key}/events/{year}/simple | 
 *TeamApi* | [**getTeamEventsKeys**](docs/TeamApi.md#getTeamEventsKeys) | **GET** /team/{team_key}/events/keys | 
 *TeamApi* | [**getTeamEventsSimple**](docs/TeamApi.md#getTeamEventsSimple) | **GET** /team/{team_key}/events/simple | 
+*TeamApi* | [**getTeamEventsStatusesByYear**](docs/TeamApi.md#getTeamEventsStatusesByYear) | **GET** /team/{team_key}/events/{year}/statuses | 
 *TeamApi* | [**getTeamMatchesByYear**](docs/TeamApi.md#getTeamMatchesByYear) | **GET** /team/{team_key}/matches/{year} | 
 *TeamApi* | [**getTeamMatchesByYearKeys**](docs/TeamApi.md#getTeamMatchesByYearKeys) | **GET** /team/{team_key}/matches/{year}/keys | 
 *TeamApi* | [**getTeamMatchesByYearSimple**](docs/TeamApi.md#getTeamMatchesByYearSimple) | **GET** /team/{team_key}/matches/{year}/simple | 
+*TeamApi* | [**getTeamMediaByTag**](docs/TeamApi.md#getTeamMediaByTag) | **GET** /team/{team_key}/media/tag/{media_tag} | 
+*TeamApi* | [**getTeamMediaByTagYear**](docs/TeamApi.md#getTeamMediaByTagYear) | **GET** /team/{team_key}/media/tag/{media_tag}/{year} | 
 *TeamApi* | [**getTeamMediaByYear**](docs/TeamApi.md#getTeamMediaByYear) | **GET** /team/{team_key}/media/{year} | 
 *TeamApi* | [**getTeamRobots**](docs/TeamApi.md#getTeamRobots) | **GET** /team/{team_key}/robots | 
 *TeamApi* | [**getTeamSimple**](docs/TeamApi.md#getTeamSimple) | **GET** /team/{team_key}/simple | 
@@ -171,13 +236,14 @@ Class | Method | HTTP request | Description
  - [EventDistrictPoints](docs/EventDistrictPoints.md)
  - [EventDistrictPointsPoints](docs/EventDistrictPointsPoints.md)
  - [EventDistrictPointsTiebreakers](docs/EventDistrictPointsTiebreakers.md)
+ - [EventInsights](docs/EventInsights.md)
  - [EventInsights2016](docs/EventInsights2016.md)
- - [EventInsights2016Detail](docs/EventInsights2016Detail.md)
  - [EventInsights2017](docs/EventInsights2017.md)
- - [EventInsights2017Detail](docs/EventInsights2017Detail.md)
+ - [EventInsights2018](docs/EventInsights2018.md)
  - [EventOPRs](docs/EventOPRs.md)
  - [EventPredictions](docs/EventPredictions.md)
  - [EventRanking](docs/EventRanking.md)
+ - [EventRankingExtraStatsInfo](docs/EventRankingExtraStatsInfo.md)
  - [EventRankingRankings](docs/EventRankingRankings.md)
  - [EventRankingSortOrderInfo](docs/EventRankingSortOrderInfo.md)
  - [EventSimple](docs/EventSimple.md)
@@ -189,8 +255,14 @@ Class | Method | HTTP request | Description
  - [MatchScoreBreakdown2016Alliance](docs/MatchScoreBreakdown2016Alliance.md)
  - [MatchScoreBreakdown2017](docs/MatchScoreBreakdown2017.md)
  - [MatchScoreBreakdown2017Alliance](docs/MatchScoreBreakdown2017Alliance.md)
+ - [MatchScoreBreakdown2018](docs/MatchScoreBreakdown2018.md)
+ - [MatchScoreBreakdown2018Alliance](docs/MatchScoreBreakdown2018Alliance.md)
+ - [MatchScoreBreakdown2019](docs/MatchScoreBreakdown2019.md)
+ - [MatchScoreBreakdown2019Alliance](docs/MatchScoreBreakdown2019Alliance.md)
  - [MatchSimple](docs/MatchSimple.md)
  - [MatchSimpleAlliances](docs/MatchSimpleAlliances.md)
+ - [MatchTimeseries2018](docs/MatchTimeseries2018.md)
+ - [MatchVideos](docs/MatchVideos.md)
  - [Media](docs/Media.md)
  - [Team](docs/Team.md)
  - [TeamEventStatus](docs/TeamEventStatus.md)
@@ -221,4 +293,6 @@ Authentication schemes defined for the API:
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
 
 ## Author
-Generated, modified, built, and maintained by Dominic Canora
+
+
+

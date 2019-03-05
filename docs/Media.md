@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **foreignKey** | **String** | The key used to identify this media on the media site. |  [optional]
 **details** | **Object** | If required, a JSON dict of additional media information. |  [optional]
 **preferred** | **Boolean** | True if the media is of high quality. |  [optional]
+**directUrl** | **String** | Direct URL to the media. |  [optional]
+**viewUrl** | **String** | The URL that leads to the full web page for the media, if one exists. |  [optional]
 
 
 <a name="TypeEnum"></a>
@@ -25,9 +27,9 @@ GITHUB_PROFILE | &quot;github-profile&quot;
 INSTAGRAM_PROFILE | &quot;instagram-profile&quot;
 PERISCOPE_PROFILE | &quot;periscope-profile&quot;
 GRABCAD | &quot;grabcad&quot;
-PINTEREST_PROFILE | &quot;pinterest-profile&quot;
-SNAPCHAT_PROFILE | &quot;snapchat-profile&quot;
-TWITCH_CHANNEL | &quot;twitch-channel&quot;
+INSTAGRAM_IMAGE | &quot;instagram-image&quot;
+EXTERNAL_LINK | &quot;external-link&quot;
+AVATAR | &quot;avatar&quot;
 
 
 

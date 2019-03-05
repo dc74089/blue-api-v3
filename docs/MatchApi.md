@@ -4,11 +4,13 @@ All URIs are relative to *https://www.thebluealliance.com/api/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**getEventMatchTimeseries**](MatchApi.md#getEventMatchTimeseries) | **GET** /event/{event_key}/matches/timeseries | 
 [**getEventMatches**](MatchApi.md#getEventMatches) | **GET** /event/{event_key}/matches | 
 [**getEventMatchesKeys**](MatchApi.md#getEventMatchesKeys) | **GET** /event/{event_key}/matches/keys | 
 [**getEventMatchesSimple**](MatchApi.md#getEventMatchesSimple) | **GET** /event/{event_key}/matches/simple | 
 [**getMatch**](MatchApi.md#getMatch) | **GET** /match/{match_key} | 
 [**getMatchSimple**](MatchApi.md#getMatchSimple) | **GET** /match/{match_key}/simple | 
+[**getMatchTimeseries**](MatchApi.md#getMatchTimeseries) | **GET** /match/{match_key}/timeseries | 
 [**getTeamEventMatches**](MatchApi.md#getTeamEventMatches) | **GET** /team/{team_key}/event/{event_key}/matches | 
 [**getTeamEventMatchesKeys**](MatchApi.md#getTeamEventMatchesKeys) | **GET** /team/{team_key}/event/{event_key}/matches/keys | 
 [**getTeamEventMatchesSimple**](MatchApi.md#getTeamEventMatchesSimple) | **GET** /team/{team_key}/event/{event_key}/matches/simple | 
@@ -16,6 +18,63 @@ Method | HTTP request | Description
 [**getTeamMatchesByYearKeys**](MatchApi.md#getTeamMatchesByYearKeys) | **GET** /team/{team_key}/matches/{year}/keys | 
 [**getTeamMatchesByYearSimple**](MatchApi.md#getTeamMatchesByYearSimple) | **GET** /team/{team_key}/matches/{year}/simple | 
 
+
+<a name="getEventMatchTimeseries"></a>
+# **getEventMatchTimeseries**
+> List&lt;String&gt; getEventMatchTimeseries(eventKey, ifModifiedSince)
+
+
+
+Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.MatchApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: apiKey
+ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+apiKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.setApiKeyPrefix("Token");
+
+MatchApi apiInstance = new MatchApi();
+String eventKey = "eventKey_example"; // String | TBA Event Key, eg `2016nytr`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+try {
+    List<String> result = apiInstance.getEventMatchTimeseries(eventKey, ifModifiedSince);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MatchApi#getEventMatchTimeseries");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventKey** | **String**| TBA Event Key, eg &#x60;2016nytr&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+
+### Return type
+
+**List&lt;String&gt;**
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 <a name="getEventMatches"></a>
 # **getEventMatches**
@@ -302,6 +361,63 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+<a name="getMatchTimeseries"></a>
+# **getMatchTimeseries**
+> List&lt;Object&gt; getMatchTimeseries(matchKey, ifModifiedSince)
+
+
+
+Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.MatchApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: apiKey
+ApiKeyAuth apiKey = (ApiKeyAuth) defaultClient.getAuthentication("apiKey");
+apiKey.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//apiKey.setApiKeyPrefix("Token");
+
+MatchApi apiInstance = new MatchApi();
+String matchKey = "matchKey_example"; // String | TBA Match Key, eg `2016nytr_qm1`
+String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
+try {
+    List<Object> result = apiInstance.getMatchTimeseries(matchKey, ifModifiedSince);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling MatchApi#getMatchTimeseries");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **matchKey** | **String**| TBA Match Key, eg &#x60;2016nytr_qm1&#x60; |
+ **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
+
+### Return type
+
+**List&lt;Object&gt;**
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
 <a name="getTeamEventMatches"></a>
 # **getTeamEventMatches**
 > List&lt;Match&gt; getTeamEventMatches(teamKey, eventKey, ifModifiedSince)
@@ -506,7 +622,7 @@ apiKey.setApiKey("YOUR API KEY");
 
 MatchApi apiInstance = new MatchApi();
 String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<Match> result = apiInstance.getTeamMatchesByYear(teamKey, year, ifModifiedSince);
@@ -522,7 +638,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -565,7 +681,7 @@ apiKey.setApiKey("YOUR API KEY");
 
 MatchApi apiInstance = new MatchApi();
 String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<String> result = apiInstance.getTeamMatchesByYearKeys(teamKey, year, ifModifiedSince);
@@ -581,7 +697,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type
@@ -624,7 +740,7 @@ apiKey.setApiKey("YOUR API KEY");
 
 MatchApi apiInstance = new MatchApi();
 String teamKey = "teamKey_example"; // String | TBA Team Key, eg `frc254`
-BigDecimal year = new BigDecimal(); // BigDecimal | Competition Year (or Season). Must be 4 digits.
+Integer year = 56; // Integer | Competition Year (or Season). Must be 4 digits.
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     List<MatchSimple> result = apiInstance.getTeamMatchesByYearSimple(teamKey, year, ifModifiedSince);
@@ -640,7 +756,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamKey** | **String**| TBA Team Key, eg &#x60;frc254&#x60; |
- **year** | **BigDecimal**| Competition Year (or Season). Must be 4 digits. |
+ **year** | **Integer**| Competition Year (or Season). Must be 4 digits. |
  **ifModifiedSince** | **String**| Value of the &#x60;Last-Modified&#x60; header in the most recently cached response by the client. | [optional]
 
 ### Return type

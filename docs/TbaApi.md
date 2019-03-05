@@ -1,10 +1,10 @@
-# TBAApi
+# TbaApi
 
 All URIs are relative to *https://www.thebluealliance.com/api/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getStatus**](TBAApi.md#getStatus) | **GET** /status | 
+[**getStatus**](TbaApi.md#getStatus) | **GET** /status | 
 
 
 <a name="getStatus"></a>
@@ -22,7 +22,7 @@ Returns API status, and TBA status information.
 //import io.swagger.client.ApiException;
 //import io.swagger.client.Configuration;
 //import io.swagger.client.auth.*;
-//import io.swagger.client.api.TBAApi;
+//import io.swagger.client.api.TbaApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -32,13 +32,13 @@ apiKey.setApiKey("YOUR API KEY");
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //apiKey.setApiKeyPrefix("Token");
 
-TBAApi apiInstance = new TBAApi();
+TbaApi apiInstance = new TbaApi();
 String ifModifiedSince = "ifModifiedSince_example"; // String | Value of the `Last-Modified` header in the most recently cached response by the client.
 try {
     APIStatus result = apiInstance.getStatus(ifModifiedSince);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling TBAApi#getStatus");
+    System.err.println("Exception when calling TbaApi#getStatus");
     e.printStackTrace();
 }
 ```
