@@ -16,6 +16,8 @@ package io.swagger.client.model;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -25,75 +27,74 @@ import java.util.Objects;
 public class MatchScoreBreakdown2015Alliance {
     @SerializedName("auto_points")
     private Integer autoPoints = null;
-
     @SerializedName("teleop_points")
     private Integer teleopPoints = null;
-
     @SerializedName("container_points")
     private Integer containerPoints = null;
-
     @SerializedName("tote_points")
     private Integer totePoints = null;
-
     @SerializedName("litter_points")
     private Integer litterPoints = null;
-
     @SerializedName("foul_points")
     private Integer foulPoints = null;
-
     @SerializedName("adjust_points")
     private Integer adjustPoints = null;
-
     @SerializedName("total_points")
     private Integer totalPoints = null;
-
     @SerializedName("foul_count")
     private Integer foulCount = null;
-
     @SerializedName("tote_count_far")
     private Integer toteCountFar = null;
-
     @SerializedName("tote_count_near")
     private Integer toteCountNear = null;
-
     @SerializedName("tote_set")
     private Boolean toteSet = null;
-
     @SerializedName("tote_stack")
     private Boolean toteStack = null;
-
     @SerializedName("container_count_level1")
     private Integer containerCountLevel1 = null;
-
     @SerializedName("container_count_level2")
     private Integer containerCountLevel2 = null;
-
     @SerializedName("container_count_level3")
     private Integer containerCountLevel3 = null;
-
     @SerializedName("container_count_level4")
     private Integer containerCountLevel4 = null;
-
     @SerializedName("container_count_level5")
     private Integer containerCountLevel5 = null;
-
     @SerializedName("container_count_level6")
     private Integer containerCountLevel6 = null;
-
     @SerializedName("container_set")
     private Boolean containerSet = null;
-
     @SerializedName("litter_count_container")
     private Integer litterCountContainer = null;
-
     @SerializedName("litter_count_landfill")
     private Integer litterCountLandfill = null;
-
     @SerializedName("litter_count_unprocessed")
     private Integer litterCountUnprocessed = null;
-
     @SerializedName("robot_set")
     private Boolean robotSet = null;
+
+    public Map<String, Integer> getMap() {
+        Map out = new HashMap();
+
+        out.put("Auto Points", getAutoPoints());
+        out.put("Teleop Points", getTeleopPoints());
+        out.put("Foul Points", getFoulPoints());
+        out.put("Adjust Points", getAdjustPoints());
+        out.put("Total Points", getTotalPoints());
+        out.put("Foul Count", getFoulCount());
+        out.put("Container Points", getContainerPoints());
+        out.put("Tote Points", getTotePoints());
+        out.put("Litter Points", getLitterPoints());
+        out.put("Totes Near", getToteCountNear());
+        out.put("Totes Far", getToteCountFar());
+        out.put("Tote Set", isToteSet() ? 1 : 0);
+        out.put("Tote Stack", isToteStack() ? 1 : 0);
+        out.put("Container Set", isContainerSet() ? 1 : 0);
+        out.put("Robot Set", isRobotSet() ? 1 : 0);
+
+        return out;
+    }
 
     public MatchScoreBreakdown2015Alliance autoPoints(Integer autoPoints) {
         this.autoPoints = autoPoints;

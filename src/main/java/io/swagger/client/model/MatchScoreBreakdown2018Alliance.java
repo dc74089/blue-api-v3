@@ -16,6 +16,8 @@ package io.swagger.client.model;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -23,6 +25,29 @@ import java.util.Objects;
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
 public class MatchScoreBreakdown2018Alliance {
+    public Map<String, Integer> getMap() {
+        Map out = new HashMap();
+
+        out.put("Auto Points", getAutoPoints());
+        out.put("Teleop Points", getTeleopPoints());
+        out.put("Endgame Points", getEndgamePoints());
+        out.put("Foul Points", getFoulPoints());
+        out.put("Adjust Points", getAdjustPoints());
+        out.put("Total Points", getTotalPoints());
+        out.put("Ranking Points", getRp());
+        out.put("Foul Count", getFoulCount());
+        out.put("Tech Foul Count", getTechFoulCount());
+        out.put("Auto Scale Seconds", getAutoScaleOwnershipSec());
+        out.put("Auto Switch Seconds", getAutoSwitchOwnershipSec());
+        out.put("Auto Ownership Points", getAutoOwnershipPoints());
+        out.put("Tele Scale Seconds", getTeleopScaleOwnershipSec());
+        out.put("Tele Switch Seconds", getTeleopSwitchOwnershipSec());
+        out.put("Tele Ownership Points", getTeleopOwnershipPoints());
+        out.put("Vault Points", getVaultPoints());
+
+        return out;
+    }
+
     @SerializedName("adjustPoints")
     private Integer adjustPoints = null;
 

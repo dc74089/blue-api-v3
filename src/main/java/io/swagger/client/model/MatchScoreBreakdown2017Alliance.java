@@ -21,6 +21,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 /**
@@ -28,6 +30,31 @@ import java.util.Objects;
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
 public class MatchScoreBreakdown2017Alliance {
+
+    public Map<String, Integer> getMap() {
+        Map out = new HashMap();
+
+        out.put("Auto Points", getAutoPoints());
+        out.put("Teleop Points", getTeleopPoints());
+        out.put("Foul Points", getFoulPoints());
+        out.put("Adjust Points", getAdjustPoints());
+        out.put("Total Points", getTotalPoints());
+        out.put("Foul Count", getFoulCount());
+        out.put("Tech Foul Count", getTechFoulCount());
+        out.put("Auto Rotor 1", isRotor1Auto() ? 1 : 0);
+        out.put("Auto Rotor 2", isRotor2Auto() ? 1 : 0);
+        out.put("Auto Fuel Low", getAutoFuelLow());
+        out.put("Auto Fuel High", getAutoFuelHigh());
+        out.put("Auto Fuel Points", getAutoFuelPoints());
+        out.put("Tele Fuel Low", getTeleopFuelLow());
+        out.put("Tele Fuel High", getTeleopFuelHigh());
+        out.put("Tele Fuel Points", getTeleopFuelPoints());
+        out.put("Tele Rotor Points", getTeleopRotorPoints());
+        out.put("Tele Takeoff Points", getTeleopTakeoffPoints());
+
+        return out;
+    }
+
     @SerializedName("autoPoints")
     private Integer autoPoints = null;
 

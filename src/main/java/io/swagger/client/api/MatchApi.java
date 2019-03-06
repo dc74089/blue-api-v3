@@ -59,7 +59,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/matches/timeseries"
-                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -193,7 +193,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/matches"
-                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -327,7 +327,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/matches/keys"
-                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -461,7 +461,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/matches/simple"
-                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -595,7 +595,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/match/{match_key}"
-                .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey.toString()));
+                .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -729,7 +729,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/match/{match_key}/simple"
-                .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey.toString()));
+                .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -863,7 +863,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/match/{match_key}/timeseries"
-                .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey.toString()));
+                .replaceAll("\\{" + "match_key" + "\\}", apiClient.escapeString(matchKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -998,8 +998,8 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/event/{event_key}/matches"
-                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey))
+                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1142,8 +1142,8 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/event/{event_key}/matches/keys"
-                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey))
+                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1286,8 +1286,8 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/event/{event_key}/matches/simple"
-                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
-                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
+                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey))
+                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1430,7 +1430,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/matches/{year}"
-                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
+                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey))
                 .replaceAll("\\{" + "year" + "\\}", apiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -1574,7 +1574,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/matches/{year}/keys"
-                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
+                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey))
                 .replaceAll("\\{" + "year" + "\\}", apiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -1718,7 +1718,7 @@ public class MatchApi {
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/matches/{year}/simple"
-                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()))
+                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey))
                 .replaceAll("\\{" + "year" + "\\}", apiClient.escapeString(year.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
