@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'io.swagger'
-version = '2019.1'
+version = '2019.3'
 
 buildscript {
     repositories {
@@ -19,7 +19,7 @@ repositories {
 }
 
 
-if(hasProperty('target') && target == 'android') {
+if (hasProperty('target') && target == 'android') {
 
     apply plugin: 'com.android.library'
     apply plugin: 'com.github.dcendents.android-maven'
@@ -87,9 +87,15 @@ if(hasProperty('target') && target == 'android') {
         }
     }
 
-    task execute(type:JavaExec) {
-       main = System.getProperty('mainClass')
-       classpath = sourceSets.main.runtimeClasspath
+    task execute(type: JavaExec) {
+        main = System.getProperty('mainClass')
+        classpath = sourceSets.main.runtimeClasspath
+    }
+
+    jar {
+        from { 
+            configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } 
+        }
     }
 }
 
