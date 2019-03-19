@@ -29,7 +29,7 @@ import java.util.Objects;
  * MatchScoreBreakdown2017Alliance
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
-public class MatchScoreBreakdown2017Alliance {
+public class MatchScoreBreakdown2017Alliance implements GenericScoreBreakdownAlliance {
 
     public Map<String, Integer> getMap() {
         Map out = new HashMap();

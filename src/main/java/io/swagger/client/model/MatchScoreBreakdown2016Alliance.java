@@ -29,7 +29,7 @@ import java.util.Objects;
  * MatchScoreBreakdown2016Alliance
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
-public class MatchScoreBreakdown2016Alliance {
+public class MatchScoreBreakdown2016Alliance implements GenericScoreBreakdownAlliance {
 
     @SerializedName("autoPoints")
     private Integer autoPoints = null;

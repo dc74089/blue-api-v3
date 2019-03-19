@@ -24,7 +24,7 @@ import java.util.Objects;
  */
 @ApiModel(description = "See the 2019 FMS API documentation for a description of each value. https://frcevents2.docs.apiary.io/#reference/match-results/score-details")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
-public class MatchScoreBreakdown2019 {
+public class MatchScoreBreakdown2019 implements GenericScoreBreakdown {
     @SerializedName("blue")
     private MatchScoreBreakdown2019Alliance blue = null;
 

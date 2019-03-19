@@ -29,7 +29,7 @@ import java.util.Objects;
  */
 @ApiModel(description = "See the 2015 FMS API documentation for a description of each value")
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
-public class MatchScoreBreakdown2015 {
+public class MatchScoreBreakdown2015 implements GenericScoreBreakdown {
     @SerializedName("blue")
     private MatchScoreBreakdown2015Alliance blue = null;
 
