@@ -21,28 +21,31 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 /**
  * MatchScoreBreakdown2016Alliance
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
-public class MatchScoreBreakdown2016Alliance implements GenericScoreBreakdownAlliance {
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
+public class MatchScoreBreakdown2016Alliance {
     @SerializedName("autoPoints")
     private Integer autoPoints = null;
+
     @SerializedName("teleopPoints")
     private Integer teleopPoints = null;
+
     @SerializedName("breachPoints")
     private Integer breachPoints = null;
+
     @SerializedName("foulPoints")
     private Integer foulPoints = null;
+
     @SerializedName("capturePoints")
     private Integer capturePoints = null;
+
     @SerializedName("adjustPoints")
     private Integer adjustPoints = null;
+
     @SerializedName("totalPoints")
     private Integer totalPoints = null;
     @SerializedName("robot1Auto")
@@ -107,34 +110,6 @@ public class MatchScoreBreakdown2016Alliance implements GenericScoreBreakdownAll
     private Integer position4crossings = null;
     @SerializedName("position5crossings")
     private Integer position5crossings = null;
-
-    public Map<String, Integer> getMap() {
-        Map out = new HashMap();
-
-        out.put("Auto Points", getAutoPoints());
-        out.put("Teleop Points", getTeleopPoints());
-        out.put("Foul Points", getFoulPoints());
-        out.put("Adjust Points", getAdjustPoints());
-        out.put("Total Points", getTotalPoints());
-        out.put("Foul Count", getFoulCount());
-        out.put("Capture Points", getCapturePoints());
-        out.put("Breach Points", getBreachPoints());
-        out.put("Auto Reach", getAutoReachPoints());
-        out.put("Auto Cross", getAutoCrossingPoints());
-        out.put("Auto Boulders Low", getAutoBouldersLow());
-        out.put("Auto Boulders High", getAutoBouldersHigh());
-        out.put("Auto Boulder Points", getAutoBoulderPoints());
-        out.put("Tele Crossing Points", getTeleopCrossingPoints());
-        out.put("Tele Boulders Low", getTeleopBouldersLow());
-        out.put("Tele Boulders High", getTeleopBouldersHigh());
-        out.put("Tele Boulder Points", getTeleopBoulderPoints());
-        out.put("Tele Breech", isTeleopDefensesBreached() ? 1 : 0);
-        out.put("Tele Challenge Points", getTeleopChallengePoints());
-        out.put("Tele Scale Points", getTeleopScalePoints());
-        out.put("Tele Tower Captured", getTeleopTowerCaptured());
-
-        return out;
-    }
 
     public MatchScoreBreakdown2016Alliance autoPoints(Integer autoPoints) {
         this.autoPoints = autoPoints;

@@ -23,7 +23,7 @@ import java.util.Objects;
  * A list of alliances, the teams on the alliances, and their score.
  */
 @ApiModel(description = "A list of alliances, the teams on the alliances, and their score.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
 public class MatchSimpleAlliances {
     @SerializedName("blue")
     private MatchAlliance blue = null;

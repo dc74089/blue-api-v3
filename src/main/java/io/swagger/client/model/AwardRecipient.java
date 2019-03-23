@@ -23,7 +23,7 @@ import java.util.Objects;
  * An &#x60;Award_Recipient&#x60; object represents the team and/or person who received an award at an event.
  */
 @ApiModel(description = "An `Award_Recipient` object represents the team and/or person who received an award at an event.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
 public class AwardRecipient {
     @SerializedName("team_key")
     private String teamKey = null;

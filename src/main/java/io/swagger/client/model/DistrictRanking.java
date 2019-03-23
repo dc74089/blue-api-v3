@@ -25,7 +25,7 @@ import java.util.Objects;
  * Rank of a team in a district.
  */
 @ApiModel(description = "Rank of a team in a district.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
 public class DistrictRanking {
     @SerializedName("team_key")
     private String teamKey = null;

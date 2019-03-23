@@ -23,8 +23,8 @@ import java.util.Objects;
  * See the 2018 FMS API documentation for a description of each value.
  */
 @ApiModel(description = "See the 2018 FMS API documentation for a description of each value.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
-public class MatchScoreBreakdown2018 implements GenericScoreBreakdown {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
+public class MatchScoreBreakdown2018 {
     @SerializedName("blue")
     private MatchScoreBreakdown2018Alliance blue = null;
 

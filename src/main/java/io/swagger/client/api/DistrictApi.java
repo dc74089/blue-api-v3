@@ -58,7 +58,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events"
-                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey));
+                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -192,7 +192,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events/keys"
-                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey));
+                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -326,7 +326,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/events/simple"
-                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey));
+                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -460,7 +460,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/rankings"
-                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey));
+                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -594,7 +594,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams"
-                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey));
+                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -728,7 +728,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams/keys"
-                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey));
+                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -862,7 +862,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/district/{district_key}/teams/simple"
-                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey));
+                .replaceAll("\\{" + "district_key" + "\\}", apiClient.escapeString(districtKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1130,7 +1130,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/event/{event_key}/district_points"
-                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey));
+                .replaceAll("\\{" + "event_key" + "\\}", apiClient.escapeString(eventKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1264,7 +1264,7 @@ public class DistrictApi {
 
         // create path and map variables
         String localVarPath = "/team/{team_key}/districts"
-                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey));
+                .replaceAll("\\{" + "team_key" + "\\}", apiClient.escapeString(teamKey.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

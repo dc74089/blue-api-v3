@@ -28,7 +28,7 @@ import java.util.Objects;
  * Playoff status for this team, may be null if the team did not make playoffs, or playoffs have not begun.
  */
 @ApiModel(description = "Playoff status for this team, may be null if the team did not make playoffs, or playoffs have not begun.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
 public class TeamEventStatusPlayoff {
     @SerializedName("level")
     private LevelEnum level = null;

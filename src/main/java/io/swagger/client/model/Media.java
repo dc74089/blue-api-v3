@@ -28,7 +28,7 @@ import java.util.Objects;
  * The &#x60;Media&#x60; object contains a reference for most any media associated with a team or event on TBA.
  */
 @ApiModel(description = "The `Media` object contains a reference for most any media associated with a team or event on TBA.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
 public class Media {
     @SerializedName("key")
     private String key = null;

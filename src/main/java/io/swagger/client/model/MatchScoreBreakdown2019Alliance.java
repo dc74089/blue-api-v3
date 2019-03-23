@@ -16,38 +16,13 @@ package io.swagger.client.model;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 /**
  * MatchScoreBreakdown2019Alliance
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
-public class MatchScoreBreakdown2019Alliance implements GenericScoreBreakdownAlliance {
-    public Map<String, Integer> getMap() {
-        Map out = new HashMap();
-
-        out.put("Auto Points", getAutoPoints());
-        out.put("Teleop Points", getTeleopPoints());
-        out.put("Foul Points", getFoulPoints());
-        out.put("Adjust Points", getAdjustPoints());
-        out.put("Total Points", getTotalPoints());
-        out.put("Ranking Points", getRp());
-        out.put("Foul Count", getFoulCount());
-        out.put("Tech Foul Count", getTechFoulCount());
-
-        out.put("Sandstorm Bonus", getSandStormBonusPoints());
-        out.put("Cargo Points", getCargoPoints());
-        out.put("Panel Points", getHatchPanelPoints());
-        out.put("Hab Climb Points", getHabClimbPoints());
-
-        out.put("Roket Ranking Point", isCompleteRocketRankingPoint() ? 1 : 0);
-        out.put("Climb Ranking Point", isHabDockingRankingPoint() ? 1 : 0);
-
-        return out;
-    }
-
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
+public class MatchScoreBreakdown2019Alliance {
     @SerializedName("adjustPoints")
     private Integer adjustPoints = null;
 

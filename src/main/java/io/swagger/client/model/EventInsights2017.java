@@ -25,7 +25,7 @@ import java.util.Objects;
  * Insights for FIRST STEAMWORKS qualification and elimination matches.
  */
 @ApiModel(description = "Insights for FIRST STEAMWORKS qualification and elimination matches.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
 public class EventInsights2017 {
     @SerializedName("average_foul_score")
     private Float averageFoulScore = null;

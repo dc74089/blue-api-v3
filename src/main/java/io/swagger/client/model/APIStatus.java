@@ -23,7 +23,7 @@ import java.util.Objects;
 /**
  * APIStatus
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-05T12:05:14.488-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-23T11:52:56.009-04:00")
 public class APIStatus {
     @SerializedName("current_season")
     private Integer currentSeason = null;
