@@ -28,7 +28,7 @@ import java.util.List;
  * ZebraAlliances
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class ZebraAlliances {
   @SerializedName("red")
   private List<ZebraTeam> red = null;

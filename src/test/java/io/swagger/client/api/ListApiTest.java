@@ -12,7 +12,6 @@
 
 package io.swagger.client.api;
 
-import io.swagger.client.ApiException;
 import io.swagger.client.model.DistrictRanking;
 import io.swagger.client.model.Event;
 import io.swagger.client.model.EventSimple;
@@ -22,10 +21,12 @@ import io.swagger.client.model.TeamSimple;
 import org.junit.Test;
 import org.junit.Ignore;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * API tests for ListApi
@@ -40,11 +41,11 @@ public class ListApiTest {
      *
      * Gets a list of events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsTest() throws ApiException {
+    public void getDistrictEventsTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<Event> response = api.getDistrictEvents(districtKey, ifModifiedSince);
@@ -56,11 +57,11 @@ public class ListApiTest {
      *
      * Gets a list of event keys for events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsKeysTest() throws ApiException {
+    public void getDistrictEventsKeysTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getDistrictEventsKeys(districtKey, ifModifiedSince);
@@ -72,11 +73,11 @@ public class ListApiTest {
      *
      * Gets a short-form list of events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsSimpleTest() throws ApiException {
+    public void getDistrictEventsSimpleTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<EventSimple> response = api.getDistrictEventsSimple(districtKey, ifModifiedSince);
@@ -88,11 +89,11 @@ public class ListApiTest {
      *
      * Gets a list of team district rankings for the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictRankingsTest() throws ApiException {
+    public void getDistrictRankingsTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<DistrictRanking> response = api.getDistrictRankings(districtKey, ifModifiedSince);
@@ -104,11 +105,11 @@ public class ListApiTest {
      *
      * Gets a list of &#x60;Team&#x60; objects that competed in events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsTest() throws ApiException {
+    public void getDistrictTeamsTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<Team> response = api.getDistrictTeams(districtKey, ifModifiedSince);
@@ -120,11 +121,11 @@ public class ListApiTest {
      *
      * Gets a list of &#x60;Team&#x60; objects that competed in events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsKeysTest() throws ApiException {
+    public void getDistrictTeamsKeysTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getDistrictTeamsKeys(districtKey, ifModifiedSince);
@@ -136,11 +137,11 @@ public class ListApiTest {
      *
      * Gets a short-form list of &#x60;Team&#x60; objects that competed in events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsSimpleTest() throws ApiException {
+    public void getDistrictTeamsSimpleTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<TeamSimple> response = api.getDistrictTeamsSimple(districtKey, ifModifiedSince);
@@ -152,11 +153,11 @@ public class ListApiTest {
      *
      * Gets a list of &#x60;Team&#x60; objects that competed in the given event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventTeamsTest() throws ApiException {
+    public void getEventTeamsTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         List<Team> response = api.getEventTeams(eventKey, ifModifiedSince);
@@ -168,11 +169,11 @@ public class ListApiTest {
      *
      * Gets a list of &#x60;Team&#x60; keys that competed in the given event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventTeamsKeysTest() throws ApiException {
+    public void getEventTeamsKeysTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getEventTeamsKeys(eventKey, ifModifiedSince);
@@ -184,11 +185,11 @@ public class ListApiTest {
      *
      * Gets a short-form list of &#x60;Team&#x60; objects that competed in the given event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventTeamsSimpleTest() throws ApiException {
+    public void getEventTeamsSimpleTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         List<TeamSimple> response = api.getEventTeamsSimple(eventKey, ifModifiedSince);
@@ -200,11 +201,11 @@ public class ListApiTest {
      *
      * Gets a key-value list of the event statuses for teams competing at the given event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventTeamsStatusesTest() throws ApiException {
+    public void getEventTeamsStatusesTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         Map<String, TeamEventStatus> response = api.getEventTeamsStatuses(eventKey, ifModifiedSince);
@@ -216,11 +217,11 @@ public class ListApiTest {
      *
      * Gets a list of events in the given year.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventsByYearTest() throws ApiException {
+    public void getEventsByYearTest() throws Exception {
         Integer year = null;
         String ifModifiedSince = null;
         List<Event> response = api.getEventsByYear(year, ifModifiedSince);
@@ -232,11 +233,11 @@ public class ListApiTest {
      *
      * Gets a list of event keys in the given year.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventsByYearKeysTest() throws ApiException {
+    public void getEventsByYearKeysTest() throws Exception {
         Integer year = null;
         String ifModifiedSince = null;
         List<String> response = api.getEventsByYearKeys(year, ifModifiedSince);
@@ -248,11 +249,11 @@ public class ListApiTest {
      *
      * Gets a short-form list of events in the given year.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventsByYearSimpleTest() throws ApiException {
+    public void getEventsByYearSimpleTest() throws Exception {
         Integer year = null;
         String ifModifiedSince = null;
         List<EventSimple> response = api.getEventsByYearSimple(year, ifModifiedSince);
@@ -264,11 +265,11 @@ public class ListApiTest {
      *
      * Gets a key-value list of the event statuses for events this team has competed at in the given year.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventsStatusesByYearTest() throws ApiException {
+    public void getTeamEventsStatusesByYearTest() throws Exception {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -281,11 +282,11 @@ public class ListApiTest {
      *
      * Gets a list of &#x60;Team&#x60; objects, paginated in groups of 500.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamsTest() throws ApiException {
+    public void getTeamsTest() throws Exception {
         Integer pageNum = null;
         String ifModifiedSince = null;
         List<Team> response = api.getTeams(pageNum, ifModifiedSince);
@@ -297,11 +298,11 @@ public class ListApiTest {
      *
      * Gets a list of &#x60;Team&#x60; objects that competed in the given year, paginated in groups of 500.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamsByYearTest() throws ApiException {
+    public void getTeamsByYearTest() throws Exception {
         Integer year = null;
         Integer pageNum = null;
         String ifModifiedSince = null;
@@ -314,11 +315,11 @@ public class ListApiTest {
      *
      * Gets a list Team Keys that competed in the given year, paginated in groups of 500.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamsByYearKeysTest() throws ApiException {
+    public void getTeamsByYearKeysTest() throws Exception {
         Integer year = null;
         Integer pageNum = null;
         String ifModifiedSince = null;
@@ -331,11 +332,11 @@ public class ListApiTest {
      *
      * Gets a list of short form &#x60;Team_Simple&#x60; objects that competed in the given year, paginated in groups of 500.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamsByYearSimpleTest() throws ApiException {
+    public void getTeamsByYearSimpleTest() throws Exception {
         Integer year = null;
         Integer pageNum = null;
         String ifModifiedSince = null;
@@ -348,11 +349,11 @@ public class ListApiTest {
      *
      * Gets a list of Team keys, paginated in groups of 500. (Note, each page will not have 500 teams, but will include the teams within that range of 500.)
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamsKeysTest() throws ApiException {
+    public void getTeamsKeysTest() throws Exception {
         Integer pageNum = null;
         String ifModifiedSince = null;
         List<String> response = api.getTeamsKeys(pageNum, ifModifiedSince);
@@ -364,11 +365,11 @@ public class ListApiTest {
      *
      * Gets a list of short form &#x60;Team_Simple&#x60; objects, paginated in groups of 500.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamsSimpleTest() throws ApiException {
+    public void getTeamsSimpleTest() throws Exception {
         Integer pageNum = null;
         String ifModifiedSince = null;
         List<TeamSimple> response = api.getTeamsSimple(pageNum, ifModifiedSince);

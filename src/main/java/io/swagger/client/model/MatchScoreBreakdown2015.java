@@ -26,7 +26,7 @@ import java.io.IOException;
  * See the 2015 FMS API documentation for a description of each value
  */
 @Schema(description = "See the 2015 FMS API documentation for a description of each value")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class MatchScoreBreakdown2015 {
   @SerializedName("blue")
   private MatchScoreBreakdown2015Alliance blue = null;
@@ -56,9 +56,9 @@ public class MatchScoreBreakdown2015 {
     public String toString() {
       return String.valueOf(value);
     }
-    public static CoopertitionEnum fromValue(String text) {
+    public static CoopertitionEnum fromValue(String input) {
       for (CoopertitionEnum b : CoopertitionEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -67,13 +67,13 @@ public class MatchScoreBreakdown2015 {
     public static class Adapter extends TypeAdapter<CoopertitionEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final CoopertitionEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public CoopertitionEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return CoopertitionEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return CoopertitionEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("coopertition")

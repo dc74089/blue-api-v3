@@ -25,7 +25,7 @@ import java.io.IOException;
  * A Win-Loss-Tie record for a team, or an alliance.
  */
 @Schema(description = "A Win-Loss-Tie record for a team, or an alliance.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class WLTRecord {
   @SerializedName("losses")
   private Integer losses = null;

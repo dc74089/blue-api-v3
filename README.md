@@ -2,7 +2,7 @@
 
 The Blue Alliance API v3
 - API version: 3.8.0
-  - Build date: 2020-03-01T17:18:29.994708-05:00[US/Eastern]
+  - Build date: 2022-02-26T16:01:43.676Z[GMT]
 
 # Overview    Information and statistics about FIRST Robotics Competition teams and events.   # Authentication   All endpoints require an Auth Key to be passed in the header `X-TBA-Auth-Key`. If you do not have an auth key yet, you can obtain one from your [Account Page](/account).    A `User-Agent` header may need to be set to prevent a 403 Unauthorized error.
 
@@ -552,6 +552,8 @@ Class | Method | HTTP request | Description
  - [MatchScoreBreakdown2019Alliance](docs/MatchScoreBreakdown2019Alliance.md)
  - [MatchScoreBreakdown2020](docs/MatchScoreBreakdown2020.md)
  - [MatchScoreBreakdown2020Alliance](docs/MatchScoreBreakdown2020Alliance.md)
+ - [MatchScoreBreakdown2022](docs/MatchScoreBreakdown2022.md)
+ - [MatchScoreBreakdown2022Alliance](docs/MatchScoreBreakdown2022Alliance.md)
  - [MatchSimple](docs/MatchSimple.md)
  - [MatchSimpleAlliances](docs/MatchSimpleAlliances.md)
  - [MatchTimeseries2018](docs/MatchTimeseries2018.md)

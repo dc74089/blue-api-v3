@@ -19,54 +19,55 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.MatchScoreBreakdown2022Alliance;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * Backup team called in, may be null.
+ * See the 2022 FMS API documentation for a description of each value. https://frc-api-docs.firstinspires.org
  */
-@Schema(description = "Backup team called in, may be null.")
+@Schema(description = "See the 2022 FMS API documentation for a description of each value. https://frc-api-docs.firstinspires.org")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
-public class EliminationAllianceBackup {
-  @SerializedName("in")
-  private String in = null;
+public class MatchScoreBreakdown2022 {
+  @SerializedName("blue")
+  private MatchScoreBreakdown2022Alliance blue = null;
 
-  @SerializedName("out")
-  private String out = null;
+  @SerializedName("red")
+  private MatchScoreBreakdown2022Alliance red = null;
 
-  public EliminationAllianceBackup in(String in) {
-    this.in = in;
+  public MatchScoreBreakdown2022 blue(MatchScoreBreakdown2022Alliance blue) {
+    this.blue = blue;
     return this;
   }
 
    /**
-   * Team key that was called in as the backup.
-   * @return in
+   * Get blue
+   * @return blue
   **/
-  @Schema(description = "Team key that was called in as the backup.")
-  public String getIn() {
-    return in;
+  @Schema(description = "")
+  public MatchScoreBreakdown2022Alliance getBlue() {
+    return blue;
   }
 
-  public void setIn(String in) {
-    this.in = in;
+  public void setBlue(MatchScoreBreakdown2022Alliance blue) {
+    this.blue = blue;
   }
 
-  public EliminationAllianceBackup out(String out) {
-    this.out = out;
+  public MatchScoreBreakdown2022 red(MatchScoreBreakdown2022Alliance red) {
+    this.red = red;
     return this;
   }
 
    /**
-   * Team key that was replaced by the backup team.
-   * @return out
+   * Get red
+   * @return red
   **/
-  @Schema(description = "Team key that was replaced by the backup team.")
-  public String getOut() {
-    return out;
+  @Schema(description = "")
+  public MatchScoreBreakdown2022Alliance getRed() {
+    return red;
   }
 
-  public void setOut(String out) {
-    this.out = out;
+  public void setRed(MatchScoreBreakdown2022Alliance red) {
+    this.red = red;
   }
 
 
@@ -78,24 +79,24 @@ public class EliminationAllianceBackup {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EliminationAllianceBackup eliminationAllianceBackup = (EliminationAllianceBackup) o;
-    return Objects.equals(this.in, eliminationAllianceBackup.in) &&
-        Objects.equals(this.out, eliminationAllianceBackup.out);
+    MatchScoreBreakdown2022 matchScoreBreakdown2022 = (MatchScoreBreakdown2022) o;
+    return Objects.equals(this.blue, matchScoreBreakdown2022.blue) &&
+        Objects.equals(this.red, matchScoreBreakdown2022.red);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(in, out);
+    return Objects.hash(blue, red);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EliminationAllianceBackup {\n");
+    sb.append("class MatchScoreBreakdown2022 {\n");
     
-    sb.append("    in: ").append(toIndentedString(in)).append("\n");
-    sb.append("    out: ").append(toIndentedString(out)).append("\n");
+    sb.append("    blue: ").append(toIndentedString(blue)).append("\n");
+    sb.append("    red: ").append(toIndentedString(red)).append("\n");
     sb.append("}");
     return sb.toString();
   }

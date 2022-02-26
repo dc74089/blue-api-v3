@@ -26,7 +26,7 @@ import java.io.IOException;
  * Playoff status for this team, may be null if the team did not make playoffs, or playoffs have not begun.
  */
 @Schema(description = "Playoff status for this team, may be null if the team did not make playoffs, or playoffs have not begun.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class TeamEventStatusPlayoff {
   /**
    * The highest playoff level the team reached.
@@ -52,9 +52,9 @@ public class TeamEventStatusPlayoff {
     public String toString() {
       return String.valueOf(value);
     }
-    public static LevelEnum fromValue(String text) {
+    public static LevelEnum fromValue(String input) {
       for (LevelEnum b : LevelEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -63,13 +63,13 @@ public class TeamEventStatusPlayoff {
     public static class Adapter extends TypeAdapter<LevelEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final LevelEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public LevelEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return LevelEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return LevelEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("level")
@@ -103,9 +103,9 @@ public class TeamEventStatusPlayoff {
     public String toString() {
       return String.valueOf(value);
     }
-    public static StatusEnum fromValue(String text) {
+    public static StatusEnum fromValue(String input) {
       for (StatusEnum b : StatusEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -114,13 +114,13 @@ public class TeamEventStatusPlayoff {
     public static class Adapter extends TypeAdapter<StatusEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public StatusEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return StatusEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return StatusEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("status")

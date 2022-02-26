@@ -25,7 +25,7 @@ import java.io.IOException;
  * An &#x60;Award_Recipient&#x60; object represents the team and/or person who received an award at an event.
  */
 @Schema(description = "An `Award_Recipient` object represents the team and/or person who received an award at an event.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class AwardRecipient {
   @SerializedName("team_key")
   private String teamKey = null;

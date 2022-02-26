@@ -1,12 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b33d84d-1af7-455e-8f96-8264022c7adb" name="Default Changelist" comment="" />
+    <list default="true" id="0b33d84d-1af7-455e-8f96-8264022c7adb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Webcast.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Webcast.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/ApiKeyAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/ApiKeyAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/OAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/auth/OAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/APIStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/APIStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/APIStatusAppVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/APIStatusAppVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Award.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Award.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/AwardRecipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/AwardRecipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/DistrictList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/DistrictList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/DistrictRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/DistrictRanking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/DistrictRankingEventPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/DistrictRankingEventPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EliminationAlliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EliminationAlliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EliminationAllianceBackup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EliminationAllianceBackup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EliminationAllianceStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EliminationAllianceStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventDistrictPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventDistrictPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventDistrictPointsPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventDistrictPointsPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventDistrictPointsTiebreakers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventDistrictPointsTiebreakers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventInsights.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventInsights.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventInsights2016.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventInsights2016.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventInsights2017.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventInsights2017.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventInsights2018.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventInsights2018.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventOPRs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventOPRs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventPredictions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventPredictions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventRanking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventRankingExtraStatsInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventRankingExtraStatsInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventRankingRankings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventRankingRankings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventRankingSortOrderInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventRankingSortOrderInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/EventSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchAlliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchAlliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2015.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2015.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2015Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2015Alliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2016.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2016.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2016Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2016Alliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2017.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2017.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2017Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2017Alliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2018.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2018.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2018Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2018Alliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2019.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2019.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2019Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2019Alliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2020.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2020.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2020Alliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchScoreBreakdown2020Alliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchSimpleAlliances.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchSimpleAlliances.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchTimeseries2018.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchTimeseries2018.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchVideos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/MatchVideos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusAlliance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusAlliance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusAllianceBackup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusAllianceBackup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusPlayoff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusPlayoff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusRank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusRankRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusRankRanking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusRankSortOrderInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamEventStatusRankSortOrderInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamRobot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/TeamSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/WLTRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/WLTRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Webcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Webcast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Zebra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/Zebra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ZebraAlliances.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ZebraAlliances.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ZebraTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/swagger/client/model/ZebraTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/DistrictApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/DistrictApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/EventApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/EventApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/ListApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/ListApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/MatchApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/MatchApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/TbaApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/TbaApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/TeamApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/swagger/client/api/TeamApiTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -25,6 +115,22 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="swagger-java-client" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="swagger-java-client" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="swagger-java-client" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="swagger-java-client" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -32,23 +138,87 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1YXuF1Zsp15N1CgIoK9o7XsvdKN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
+  <component name="RunManager" selected="Gradle.blue-api-v3 [jar]">
+    <configuration name="blue-api-v3 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="blue-api-v3 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.blue-api-v3 [jar]" />
+        <item itemvalue="Gradle.blue-api-v3 [build]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -66,26 +236,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1583101355628">
-      <screen x="0" y="635" width="1920" height="1053" />
-    </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.635.1920.1053/1920.0.1080.1920@0.635.1920.1053" timestamp="1583101355628" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1583101355628">
-      <screen x="0" y="635" width="1920" height="1053" />
-    </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.635.1920.1053/1920.0.1080.1920@0.635.1920.1053" timestamp="1583101355628" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1583101355627">
-      <screen x="0" y="635" width="1920" height="1053" />
-    </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.635.1920.1053/1920.0.1080.1920@0.635.1920.1053" timestamp="1583101355627" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1583101355628">
-      <screen x="0" y="635" width="1920" height="1053" />
-    </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.635.1920.1053/1920.0.1080.1920@0.635.1920.1053" timestamp="1583101355628" />
-    <state x="443" y="739" width="1024" height="852" key="SettingsEditor" timestamp="1583101231735">
-      <screen x="0" y="635" width="1920" height="1053" />
-    </state>
-    <state x="443" y="739" width="1024" height="852" key="SettingsEditor/0.635.1920.1053/1920.0.1080.1920@0.635.1920.1053" timestamp="1583101231735" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

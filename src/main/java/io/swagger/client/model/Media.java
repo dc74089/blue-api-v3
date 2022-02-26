@@ -25,7 +25,7 @@ import java.io.IOException;
  * The &#x60;Media&#x60; object contains a reference for most any media associated with a team or event on TBA.
  */
 @Schema(description = "The `Media` object contains a reference for most any media associated with a team or event on TBA.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class Media {
   /**
    * String type of the media element.
@@ -59,9 +59,9 @@ public class Media {
     public String toString() {
       return String.valueOf(value);
     }
-    public static TypeEnum fromValue(String text) {
+    public static TypeEnum fromValue(String input) {
       for (TypeEnum b : TypeEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -70,13 +70,13 @@ public class Media {
     public static class Adapter extends TypeAdapter<TypeEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final TypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public TypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return TypeEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return TypeEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("type")

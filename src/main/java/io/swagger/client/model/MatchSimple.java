@@ -26,7 +26,7 @@ import java.io.IOException;
  * MatchSimple
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class MatchSimple {
   @SerializedName("key")
   private String key = null;
@@ -55,9 +55,9 @@ public class MatchSimple {
     public String toString() {
       return String.valueOf(value);
     }
-    public static CompLevelEnum fromValue(String text) {
+    public static CompLevelEnum fromValue(String input) {
       for (CompLevelEnum b : CompLevelEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -66,13 +66,13 @@ public class MatchSimple {
     public static class Adapter extends TypeAdapter<CompLevelEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final CompLevelEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public CompLevelEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return CompLevelEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return CompLevelEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("comp_level")
@@ -109,9 +109,9 @@ public class MatchSimple {
     public String toString() {
       return String.valueOf(value);
     }
-    public static WinningAllianceEnum fromValue(String text) {
+    public static WinningAllianceEnum fromValue(String input) {
       for (WinningAllianceEnum b : WinningAllianceEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -120,13 +120,13 @@ public class MatchSimple {
     public static class Adapter extends TypeAdapter<WinningAllianceEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final WinningAllianceEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public WinningAllianceEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return WinningAllianceEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return WinningAllianceEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("winning_alliance")

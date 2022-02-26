@@ -26,7 +26,7 @@ import java.io.IOException;
  * See the 2017 FMS API documentation for a description of each value.
  */
 @Schema(description = "See the 2017 FMS API documentation for a description of each value.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class MatchScoreBreakdown2017 {
   @SerializedName("blue")
   private MatchScoreBreakdown2017Alliance blue = null;

@@ -12,15 +12,16 @@
 
 package io.swagger.client.api;
 
-import io.swagger.client.ApiException;
 import io.swagger.client.model.APIStatus;
 import org.junit.Test;
 import org.junit.Ignore;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * API tests for TbaApi
@@ -35,11 +36,11 @@ public class TbaApiTest {
      *
      * Returns API status, and TBA status information.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getStatusTest() throws ApiException {
+    public void getStatusTest() throws Exception {
         String ifModifiedSince = null;
         APIStatus response = api.getStatus(ifModifiedSince);
 

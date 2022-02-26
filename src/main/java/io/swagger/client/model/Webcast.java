@@ -25,7 +25,7 @@ import java.io.IOException;
  * Webcast
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class Webcast {
   /**
    * Type of webcast, typically descriptive of the streaming provider.
@@ -58,9 +58,9 @@ public class Webcast {
     public String toString() {
       return String.valueOf(value);
     }
-    public static TypeEnum fromValue(String text) {
+    public static TypeEnum fromValue(String input) {
       for (TypeEnum b : TypeEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -69,13 +69,13 @@ public class Webcast {
     public static class Adapter extends TypeAdapter<TypeEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final TypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public TypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return TypeEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return TypeEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("type")
@@ -83,6 +83,9 @@ public class Webcast {
 
   @SerializedName("channel")
   private String channel = null;
+
+  @SerializedName("date")
+  private String date = null;
 
   @SerializedName("file")
   private String file = null;
@@ -123,6 +126,24 @@ public class Webcast {
     this.channel = channel;
   }
 
+  public Webcast date(String date) {
+    this.date = date;
+    return this;
+  }
+
+   /**
+   * The date for the webcast in &#x60;yyyy-mm-dd&#x60; format. May be null.
+   * @return date
+  **/
+  @Schema(description = "The date for the webcast in `yyyy-mm-dd` format. May be null.")
+  public String getDate() {
+    return date;
+  }
+
+  public void setDate(String date) {
+    this.date = date;
+  }
+
   public Webcast file(String file) {
     this.file = file;
     return this;
@@ -153,12 +174,13 @@ public class Webcast {
     Webcast webcast = (Webcast) o;
     return Objects.equals(this.type, webcast.type) &&
         Objects.equals(this.channel, webcast.channel) &&
+        Objects.equals(this.date, webcast.date) &&
         Objects.equals(this.file, webcast.file);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, channel, file);
+    return Objects.hash(type, channel, date, file);
   }
 
 
@@ -169,6 +191,7 @@ public class Webcast {
     
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
+    sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    file: ").append(toIndentedString(file)).append("\n");
     sb.append("}");
     return sb.toString();

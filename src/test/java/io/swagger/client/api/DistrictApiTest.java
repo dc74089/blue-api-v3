@@ -12,7 +12,6 @@
 
 package io.swagger.client.api;
 
-import io.swagger.client.ApiException;
 import io.swagger.client.model.DistrictList;
 import io.swagger.client.model.DistrictRanking;
 import io.swagger.client.model.Event;
@@ -23,10 +22,12 @@ import io.swagger.client.model.TeamSimple;
 import org.junit.Test;
 import org.junit.Ignore;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * API tests for DistrictApi
@@ -41,11 +42,11 @@ public class DistrictApiTest {
      *
      * Gets a list of events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsTest() throws ApiException {
+    public void getDistrictEventsTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<Event> response = api.getDistrictEvents(districtKey, ifModifiedSince);
@@ -57,11 +58,11 @@ public class DistrictApiTest {
      *
      * Gets a list of event keys for events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsKeysTest() throws ApiException {
+    public void getDistrictEventsKeysTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getDistrictEventsKeys(districtKey, ifModifiedSince);
@@ -73,11 +74,11 @@ public class DistrictApiTest {
      *
      * Gets a short-form list of events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictEventsSimpleTest() throws ApiException {
+    public void getDistrictEventsSimpleTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<EventSimple> response = api.getDistrictEventsSimple(districtKey, ifModifiedSince);
@@ -89,11 +90,11 @@ public class DistrictApiTest {
      *
      * Gets a list of team district rankings for the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictRankingsTest() throws ApiException {
+    public void getDistrictRankingsTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<DistrictRanking> response = api.getDistrictRankings(districtKey, ifModifiedSince);
@@ -105,11 +106,11 @@ public class DistrictApiTest {
      *
      * Gets a list of &#x60;Team&#x60; objects that competed in events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsTest() throws ApiException {
+    public void getDistrictTeamsTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<Team> response = api.getDistrictTeams(districtKey, ifModifiedSince);
@@ -121,11 +122,11 @@ public class DistrictApiTest {
      *
      * Gets a list of &#x60;Team&#x60; objects that competed in events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsKeysTest() throws ApiException {
+    public void getDistrictTeamsKeysTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getDistrictTeamsKeys(districtKey, ifModifiedSince);
@@ -137,11 +138,11 @@ public class DistrictApiTest {
      *
      * Gets a short-form list of &#x60;Team&#x60; objects that competed in events in the given district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictTeamsSimpleTest() throws ApiException {
+    public void getDistrictTeamsSimpleTest() throws Exception {
         String districtKey = null;
         String ifModifiedSince = null;
         List<TeamSimple> response = api.getDistrictTeamsSimple(districtKey, ifModifiedSince);
@@ -153,11 +154,11 @@ public class DistrictApiTest {
      *
      * Gets a list of districts and their corresponding district key, for the given year.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getDistrictsByYearTest() throws ApiException {
+    public void getDistrictsByYearTest() throws Exception {
         Integer year = null;
         String ifModifiedSince = null;
         List<DistrictList> response = api.getDistrictsByYear(year, ifModifiedSince);
@@ -169,11 +170,11 @@ public class DistrictApiTest {
      *
      * Gets a list of team rankings for the Event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventDistrictPointsTest() throws ApiException {
+    public void getEventDistrictPointsTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         EventDistrictPoints response = api.getEventDistrictPoints(eventKey, ifModifiedSince);
@@ -185,11 +186,11 @@ public class DistrictApiTest {
      *
      * Gets an array of districts representing each year the team was in a district. Will return an empty array if the team was never in a district.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamDistrictsTest() throws ApiException {
+    public void getTeamDistrictsTest() throws Exception {
         String teamKey = null;
         String ifModifiedSince = null;
         List<DistrictList> response = api.getTeamDistricts(teamKey, ifModifiedSince);

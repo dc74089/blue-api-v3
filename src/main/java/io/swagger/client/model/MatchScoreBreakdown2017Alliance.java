@@ -25,7 +25,7 @@ import java.io.IOException;
  * MatchScoreBreakdown2017Alliance
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class MatchScoreBreakdown2017Alliance {
   @SerializedName("autoPoints")
   private Integer autoPoints = null;
@@ -64,9 +64,9 @@ public class MatchScoreBreakdown2017Alliance {
     public String toString() {
       return String.valueOf(value);
     }
-    public static Robot1AutoEnum fromValue(String text) {
+    public static Robot1AutoEnum fromValue(String input) {
       for (Robot1AutoEnum b : Robot1AutoEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -75,13 +75,13 @@ public class MatchScoreBreakdown2017Alliance {
     public static class Adapter extends TypeAdapter<Robot1AutoEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final Robot1AutoEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public Robot1AutoEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return Robot1AutoEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return Robot1AutoEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("robot1Auto")
@@ -109,9 +109,9 @@ public class MatchScoreBreakdown2017Alliance {
     public String toString() {
       return String.valueOf(value);
     }
-    public static Robot2AutoEnum fromValue(String text) {
+    public static Robot2AutoEnum fromValue(String input) {
       for (Robot2AutoEnum b : Robot2AutoEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -120,13 +120,13 @@ public class MatchScoreBreakdown2017Alliance {
     public static class Adapter extends TypeAdapter<Robot2AutoEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final Robot2AutoEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public Robot2AutoEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return Robot2AutoEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return Robot2AutoEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("robot2Auto")
@@ -154,9 +154,9 @@ public class MatchScoreBreakdown2017Alliance {
     public String toString() {
       return String.valueOf(value);
     }
-    public static Robot3AutoEnum fromValue(String text) {
+    public static Robot3AutoEnum fromValue(String input) {
       for (Robot3AutoEnum b : Robot3AutoEnum.values()) {
-        if (String.valueOf(b.value).equals(text)) {
+        if (b.value.equals(input)) {
           return b;
         }
       }
@@ -165,13 +165,13 @@ public class MatchScoreBreakdown2017Alliance {
     public static class Adapter extends TypeAdapter<Robot3AutoEnum> {
       @Override
       public void write(final JsonWriter jsonWriter, final Robot3AutoEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
+        jsonWriter.value(String.valueOf(enumeration.getValue()));
       }
 
       @Override
       public Robot3AutoEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return Robot3AutoEnum.fromValue(String.valueOf(value));
+        Object value = jsonReader.nextString();
+        return Robot3AutoEnum.fromValue((String)(value));
       }
     }
   }  @SerializedName("robot3Auto")

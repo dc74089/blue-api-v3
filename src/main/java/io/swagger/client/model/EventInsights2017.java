@@ -27,7 +27,7 @@ import java.util.List;
  * Insights for FIRST STEAMWORKS qualification and elimination matches.
  */
 @Schema(description = "Insights for FIRST STEAMWORKS qualification and elimination matches.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-03-01T17:18:29.994708-05:00[US/Eastern]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-02-26T16:01:43.676Z[GMT]")
 public class EventInsights2017 {
   @SerializedName("average_foul_score")
   private Float averageFoulScore = null;

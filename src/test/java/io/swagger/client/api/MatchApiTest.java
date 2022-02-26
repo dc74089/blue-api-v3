@@ -12,17 +12,18 @@
 
 package io.swagger.client.api;
 
-import io.swagger.client.ApiException;
 import io.swagger.client.model.Match;
 import io.swagger.client.model.MatchSimple;
 import io.swagger.client.model.Zebra;
 import org.junit.Test;
 import org.junit.Ignore;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 /**
  * API tests for MatchApi
@@ -37,11 +38,11 @@ public class MatchApiTest {
      *
      * Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventMatchTimeseriesTest() throws ApiException {
+    public void getEventMatchTimeseriesTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getEventMatchTimeseries(eventKey, ifModifiedSince);
@@ -53,11 +54,11 @@ public class MatchApiTest {
      *
      * Gets a list of matches for the given event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventMatchesTest() throws ApiException {
+    public void getEventMatchesTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         List<Match> response = api.getEventMatches(eventKey, ifModifiedSince);
@@ -69,11 +70,11 @@ public class MatchApiTest {
      *
      * Gets a list of match keys for the given event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventMatchesKeysTest() throws ApiException {
+    public void getEventMatchesKeysTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         List<String> response = api.getEventMatchesKeys(eventKey, ifModifiedSince);
@@ -85,11 +86,11 @@ public class MatchApiTest {
      *
      * Gets a short-form list of matches for the given event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getEventMatchesSimpleTest() throws ApiException {
+    public void getEventMatchesSimpleTest() throws Exception {
         String eventKey = null;
         String ifModifiedSince = null;
         List<MatchSimple> response = api.getEventMatchesSimple(eventKey, ifModifiedSince);
@@ -101,11 +102,11 @@ public class MatchApiTest {
      *
      * Gets a &#x60;Match&#x60; object for the given match key.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMatchTest() throws ApiException {
+    public void getMatchTest() throws Exception {
         String matchKey = null;
         String ifModifiedSince = null;
         Match response = api.getMatch(matchKey, ifModifiedSince);
@@ -117,11 +118,11 @@ public class MatchApiTest {
      *
      * Gets a short-form &#x60;Match&#x60; object for the given match key.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMatchSimpleTest() throws ApiException {
+    public void getMatchSimpleTest() throws Exception {
         String matchKey = null;
         String ifModifiedSince = null;
         MatchSimple response = api.getMatchSimple(matchKey, ifModifiedSince);
@@ -133,11 +134,11 @@ public class MatchApiTest {
      *
      * Gets an array of game-specific Match Timeseries objects for the given match key or an empty array if not available. *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMatchTimeseriesTest() throws ApiException {
+    public void getMatchTimeseriesTest() throws Exception {
         String matchKey = null;
         String ifModifiedSince = null;
         List<Object> response = api.getMatchTimeseries(matchKey, ifModifiedSince);
@@ -149,11 +150,11 @@ public class MatchApiTest {
      *
      * Gets Zebra MotionWorks data for a Match for the given match key.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getMatchZebraTest() throws ApiException {
+    public void getMatchZebraTest() throws Exception {
         String matchKey = null;
         String ifModifiedSince = null;
         Zebra response = api.getMatchZebra(matchKey, ifModifiedSince);
@@ -165,11 +166,11 @@ public class MatchApiTest {
      *
      * Gets a list of matches for the given team and event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesTest() throws ApiException {
+    public void getTeamEventMatchesTest() throws Exception {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -182,11 +183,11 @@ public class MatchApiTest {
      *
      * Gets a list of match keys for matches for the given team and event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesKeysTest() throws ApiException {
+    public void getTeamEventMatchesKeysTest() throws Exception {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -199,11 +200,11 @@ public class MatchApiTest {
      *
      * Gets a short-form list of matches for the given team and event.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamEventMatchesSimpleTest() throws ApiException {
+    public void getTeamEventMatchesSimpleTest() throws Exception {
         String teamKey = null;
         String eventKey = null;
         String ifModifiedSince = null;
@@ -216,11 +217,11 @@ public class MatchApiTest {
      *
      * Gets a list of matches for the given team and year.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearTest() throws ApiException {
+    public void getTeamMatchesByYearTest() throws Exception {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -233,11 +234,11 @@ public class MatchApiTest {
      *
      * Gets a list of match keys for matches for the given team and year.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearKeysTest() throws ApiException {
+    public void getTeamMatchesByYearKeysTest() throws Exception {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
@@ -250,11 +251,11 @@ public class MatchApiTest {
      *
      * Gets a short-form list of matches for the given team and year.
      *
-     * @throws ApiException
+     * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void getTeamMatchesByYearSimpleTest() throws ApiException {
+    public void getTeamMatchesByYearSimpleTest() throws Exception {
         String teamKey = null;
         Integer year = null;
         String ifModifiedSince = null;
